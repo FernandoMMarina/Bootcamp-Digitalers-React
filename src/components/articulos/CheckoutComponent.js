@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
-import { useSelector } from 'react-redux';
+import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router';
+import { CARRITO_REMOVE, CARRITO_REMOVE_ALL } from '../../redux/actions/carrito/actions';
 
 export const CheckoutComponent = () => {
     
@@ -10,12 +11,15 @@ export const CheckoutComponent = () => {
         (state) => state.carrito
     )
 
+	const dispach = useDispatch();
+
 	const [pais, setPais] = useState("");
 	const [direccion,setDireccion] = useState('');
 	const [nombre,setNombre] = useState('');
 	const [apellido,setApellido] = useState('');
 	const [email,setEmail] = useState('');		
 	// const [medioPago,setMedioPago] = useState('');
+	const [cupon,setCupon] = useState('');
 
 	const isDisabled = () => {
 		return  pais ==='' || direccion === '' || nombre ==='' || apellido ==='' || email ==='';
@@ -43,11 +47,27 @@ export const CheckoutComponent = () => {
 					return response.json()
 				}).then(json => {
 					//json.id -> 1
-					const id = 1
-					history.push({path: `/checkout-succes/${id}`});
+
+					dispach(CARRITO_REMOVE_ALL);
+
+					const id = 1					
+					history.push({pathname: `/checkout-success/${id}`});
 			});
 		}
 	}
+
+    const buscarCupon = async () => {
+        //consulta a un api rest
+        await fetch(`cupon.json`)
+        .then(
+            (response) => response.json()
+        ).then((data) => {
+			
+            // const newAdd = addAll;
+            // newAdd.payload = data
+            // dispath(addAll)
+        });
+    }
 
     return (
         <div className="row g-5 py-2">
@@ -62,9 +82,9 @@ export const CheckoutComponent = () => {
 	        </h4>
 	        <ul className="list-group mb-3">
 			{
-				carritoReducer.item.map((item,index) => {
+				carritoReducer.items.map((item,index) => {
 					return <>
-							<li className="list-group-item d-flex justify-content-between lh-sm">
+							<li key={index} className="list-group-item d-flex justify-content-between lh-sm">
 							<div>
 								<h6 className="my-0">{item.item.titulo}</h6>
 							</div>
@@ -85,13 +105,23 @@ export const CheckoutComponent = () => {
 	          </li>
 	          <li className="list-group-item d-flex justify-content-between">
 	            <span>Total ($)</span>
-	            <strong>2500.0</strong>
+				<strong>
+				{
+					carritoReducer.items.reduce( (x,y) => x + (y.item.precio * y.cantidad), 0)
+				}
+				</strong>
 	          </li>
 	        </ul>
 	        <form className="card p-2">
 	          <div className="input-group">
-	            <input type="text" className="form-control" placeholder="Código Promoción"/>
-	            <button type="submit" className="btn btn-secondary">Aplicar ódigo</button>
+	            <input type="text" className="form-control" placeholder="Código Promoción"
+					value={cupon}
+					onChange={e => setCupon(e.target.value)}/>
+	            <button type="button" className="btn btn-secondary"
+					disabled={cupon === ''} 
+					onClick={() => buscarCupon()}>
+					Aplicar código
+				</button>
 	          </div>
 	        </form>
 	      </div>

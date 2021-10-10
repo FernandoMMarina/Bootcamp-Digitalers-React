@@ -20,27 +20,27 @@ export default function DetallearticulosComponent() {
 
     return (
         <>
-        <div className="row">
-			<div className="col-12">
-				<h3>Detalle de articulo</h3>			
-				<div className="card mb-3">
-				  <div className="row g-0">
-				    <div className="col-md-5">
-				      <img src="/assets/images/ceramica.jpg" className="img-fluid rounded-start" alt="ceramica"/>
-				    </div>
-				    <div className="col-md-7">
-						<div className="card-body">
-				        	<h5 className="card-title">{articulo.titulo}</h5>
-				        	<p className="card-text">{articulo.codigo}</p>
-					      	<div className="col-sm-12 col-md-12 col-lg-8 col-xxl-6">
-							  <ArticuloAdd articulo={articulo}/>
-							</div>
-				      	</div>					  	
-				    </div>
-				  </div>
-				</div>	
+			<div className="row">
+				<div className="col-12">
+					<h3>Detalle de articulo</h3>			
+					<div className="card mb-3">
+					<div className="row g-0">
+						<div className="col-md-5">
+						<img src="/assets/images/ceramica.jpg" className="img-fluid rounded-start" alt="ceramica"/>
+						</div>
+						<div className="col-md-7">
+							<div className="card-body">
+								<h5 className="card-title">{articulo.titulo}</h5>
+								<p className="card-text">{articulo.codigo}</p>
+								<div className="col-sm-12 col-md-12 col-lg-8 col-xxl-6">
+								<ArticuloAdd articulo={articulo}/>
+								</div>
+							</div>					  	
+						</div>
+					</div>
+					</div>	
+				</div>
 			</div>
-		</div>
         </>
     )
 }

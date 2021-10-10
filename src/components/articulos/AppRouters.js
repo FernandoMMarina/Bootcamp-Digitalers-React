@@ -2,17 +2,18 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ArticulosComponent from "./ArticulosComponent";
-import ArticuloComponent from "./ArticuloComponent";
 import Navbar from "./NavbarComponent";
 import NotFoundComponent from "./NotFoundComponent";
 import { addAll } from '../../redux/actions/articulos/actions'
-import DetalleArticulosComponent from "./DetalleArticulos";
+import DetallearticulosComponent from "./DetalleArticulosComponent";
 import Carritocomponent from "./CarritoComponent";
 import MensajeriaComponent from "./MensajeriaComponent";
 import CheckoutComponent from "./CheckoutComponent";
+import CheckoutSuccessComponent from "./CheckoutSuccessComponent";
 
 export default function AppRouters() {
-    debugger;
+
+    
     const dispath = useDispatch();
 
     //para cargar datos en un componentes la primera vez
@@ -22,6 +23,7 @@ export default function AppRouters() {
     }, []);
 
     const findArticulos = async () => {
+        //consulta a un api rest
         await fetch(`articulos.json`)
         .then(
             (response) => response.json()
@@ -39,15 +41,13 @@ export default function AppRouters() {
             <div className="container">
                 <Switch>
                     <Route exact path="/" component={ArticulosComponent}/>
-                    <Route exact path="/articulo/detalle/:id" component={DetalleArticulosComponent}/>
+                    <Route exact path="/articulo/detalle/:id" component={DetallearticulosComponent}/>
                     <Route exact path="/carrito" component={Carritocomponent}/>
                     <Route exact path="/checkout" component={CheckoutComponent}/>
+                    <Route exact path="/checkout-success/:id" component={CheckoutSuccessComponent}/>
                     <Route path="*" component={NotFoundComponent}/>
                 </Switch>
             </div>
         </BrowserRouter>
     );
 }
-
-
-

@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import ArticuloComponent from "./ArticuloComponent";
 import Footer from "./FooterComponent";
 
 export default function ArticulosComponent(props) {
@@ -9,13 +10,13 @@ export default function ArticulosComponent(props) {
 
     return (
         <>
-            <div className="container-fluid">
-                <div className="row mt-2">
+            <div className="container">
+                <div className="row mt-0">
                     <div className="col">
-                        <div className="row g-0 mt-1">
+                        <div className="row g-2 mt-5">
                             {
                                 articuloReducer.articulos.map((articulo, index) => {
-                                        return <ArticulosComponent key={index} articulo={articulo}></ArticulosComponent>
+                                        return <ArticuloComponent key={index} articulo={articulo}></ArticuloComponent>
                                     }
                                 )
                             }
