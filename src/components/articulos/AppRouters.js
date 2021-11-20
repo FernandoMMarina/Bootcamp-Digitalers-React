@@ -10,6 +10,7 @@ import Carritocomponent from "./CarritoComponent";
 import MensajeriaComponent from "./MensajeriaComponent";
 import CheckoutComponent from "./CheckoutComponent";
 import CheckoutSuccessComponent from "./CheckoutSuccessComponent";
+import HomeComponent from "./HomeComponent";
 
 export default function AppRouters() {
 
@@ -40,7 +41,8 @@ export default function AppRouters() {
             <MensajeriaComponent/>
             <div className="container">
                 <Switch>
-                    <Route exact path="/" component={ArticulosComponent}/>
+                    <Route exact path="/" component={HomeComponent}/>
+                    <Route exact path="/productos" component={ArticulosComponent}/>
                     <Route exact path="/articulo/detalle/:id" component={DetallearticulosComponent}/>
                     <Route exact path="/carrito" component={Carritocomponent}/>
                     <Route exact path="/checkout" component={CheckoutComponent}/>

@@ -1,26 +1,98 @@
 [
     {
         "id":1,
-        "titulo": "articulos 1",
+        "titulo": "Iphone 7",
         "codigo": "000001",
         "precio": 1500,
-        "categria": "categoria 1",
-        "marca": "marca 1"
+        "categoria": "Celulares",
+        "marca": "Apple"
     },  
     {   
         "id":2,
-        "titulo": "articulos 2",
+        "titulo": "Iphone 7 Plus",
         "codigo": "000002",
         "precio": 3500,
-        "categria": "categoria 2",
-        "marca": "marca 2"
+        "categoria": "Celulares",
+        "marca": "Apple"
     },  
     {   
         "id":3,
-        "titulo": "articulos 3",
+        "titulo": "Smart TV Hyundai",
         "codigo": "000003",
         "precio": 1530,
-        "categria": "categoria 3",
-        "marca": "marca 3"
+        "categoria": "Televisores",
+        "marca": "Hyundai"
+    },
+    {   
+        "id":4,
+        "titulo": "Smart TV Sony",
+        "codigo": "000004",
+        "precio": 1530,
+        "categoria": "Televisores",
+        "marca": "Sony"
+    },
+    {   
+        "id":4,
+        "titulo": "Smart TV Sony",
+        "codigo": "000004",
+        "precio": 1530,
+        "categoria": "Televisores",
+        "marca": "Sony"
+    },
+    {   
+        "id":4,
+        "titulo": "Smart TV Sony",
+        "codigo": "000004",
+        "precio": 1530,
+        "categoria": "Televisores",
+        "marca": "Sony"
+    },
+    {   
+        "id":4,
+        "titulo": "Smart TV Sony",
+        "codigo": "000004",
+        "precio": 1530,
+        "categoria": "Televisores",
+        "marca": "Sony"
+    },
+    {   
+        "id":4,
+        "titulo": "Smart TV Sony",
+        "codigo": "000004",
+        "precio": 1530,
+        "categoria": "Televisores",
+        "marca": "Sony"
+    },
+    {   
+        "id":4,
+        "titulo": "Smart TV Sony",
+        "codigo": "000004",
+        "precio": 1530,
+        "categoria": "Televisores",
+        "marca": "Sony"
+    },
+    {   
+        "id":4,
+        "titulo": "Smart TV Sony",
+        "codigo": "000004",
+        "precio": 1530,
+        "categoria": "Televisores",
+        "marca": "Sony"
+    },
+    {   
+        "id":4,
+        "titulo": "Smart TV Sony",
+        "codigo": "000004",
+        "precio": 1530,
+        "categoria": "Televisores",
+        "marca": "Sony"
+    },
+    {   
+        "id":4,
+        "titulo": "Smart TV Sony",
+        "codigo": "000004",
+        "precio": 1530,
+        "categoria": "Televisores",
+        "marca": "Sony"
     }
 ]

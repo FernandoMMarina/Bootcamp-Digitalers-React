@@ -3,8 +3,16 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { CARRITO_ADD, CARRITO_UPDATE } from '../../redux/actions/carrito/actions';
 import { MSJ_ADD } from '../../redux/actions/mensaje/actions';
+import { IconButton   } from '@material-ui/core';
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+import RemoveShoppingCartIcon from '@material-ui/icons/RemoveShoppingCart';
+import Button from '@material-ui/core/Button';
+import { createTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
+import { green, purple } from '@material-ui/core/colors';
+import { borders } from '@material-ui/system';
+
 export const ArticuloAdd = (props) => {
-    
+
     const {articulo} = props;
 
 	const carritoReducer = useSelector(
@@ -65,13 +73,12 @@ export const ArticuloAdd = (props) => {
 	}
 
     return (
-        <div className="input-group mb-3 justify-content-center">
+        <div className="input-group mb justify-content-center">
             <div className="col-auto">
-                <button className="btn btn-warning" type="button"
-                    onClick={() => decrement()}
-                    disabled={cantidad===0}>
-                        <i className="bi bi-cart-dash"></i>
-                </button>
+				<IconButton color="primary" aria-label="add to shopping cart" onClick={() => decrement()} disabled={cantidad===0}>
+  					<RemoveShoppingCartIcon/>
+				</IconButton>
+				
             </div>
             <div className="col">
                 <label htmlFor="cantidad" className="visually-hidden">Cantidad</label>
@@ -81,17 +88,15 @@ export const ArticuloAdd = (props) => {
                     onChange={(e) => setCantidad(e.target.value)} />
             </div>
             <div className="col-auto">
-                <button type="button" className="btn btn-success mb-3 btnAdd"
-                    onClick={() => increment()}>
-                    <i className="bi bi-cart-plus"></i>
-                </button>
+				<IconButton color="primary" aria-label="add to shopping cart" onClick={() => increment()}>
+  					<AddShoppingCartIcon/>
+				</IconButton>
             </div>
-            <button type="button" className="btn btn-primary w-100" 
-                onClick={()=>submitHandler()}
+            
+			<Button variant="contained" color="primary"  onClick={()=>submitHandler()}
                 disabled={cantidad === 0 || cantidad >= 999}>
-                <i className="bi bi-cart-plus"></i>
-                Agregar
-            </button>
+        		Agregar
+      		</Button>
         </div>
     )
 }

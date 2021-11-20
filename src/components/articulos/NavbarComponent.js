@@ -2,7 +2,11 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
 import { addAll, remove, search } from '../../redux/actions/articulos/actions';
-
+import React from 'react';
+import HomeIcon from '@material-ui/icons/Home';
+import SearchIcon from '@material-ui/icons/Search';
+import { IconButton } from "@material-ui/core";
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 export default function NavbarComponent() {
 
@@ -17,7 +21,6 @@ export default function NavbarComponent() {
             dispath(articuloSearch);
         }else {
             dispath(remove)
-
             fetch(`articulos.json`)
             .then(
                 (response) => response.json()
@@ -33,7 +36,9 @@ export default function NavbarComponent() {
         <>      
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container-fluid">
-                    <NavLink activeClassName="active" className="navbar-brand" to="/">Home</NavLink>
+                    <NavLink activeClassName="active" className="navbar-brand" to="/">
+                        <HomeIcon fontSize="large"/>
+                    </NavLink>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -47,20 +52,21 @@ export default function NavbarComponent() {
                                 <a className="nav-link" href="/secure/profile">Usuario</a>
                             </li>
                         </ul>
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                        <ul className="navbar-nav me mb-2 mb-lg-0">
                             <li>
-                                <Link to="/carrito" className="btn btn-info position-relative">
-                                    Carrito
+                                <Link to="/carrito" >
+                                    <ShoppingCartIcon fontSize="large"   />
                                 </Link>
+                                
                             </li>
                         </ul>
                         <div className="d-flex">
                             <input className="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar"
                                 value={clave}
                                 onChange={e => setClave(e.target.value)}/>
-                            <button className="btn btn-secondary my-2 my-sm-0" type="button" onClick={() => buscar()}>
-                                Buscar
-                            </button>
+                            <IconButton onClick={() => buscar()}>
+                                <SearchIcon/>
+                            </IconButton>
                         </div>		
                     </div>
                 </div>
