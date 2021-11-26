@@ -74,7 +74,7 @@ export default function Carritocomponent() {
         <div className="row">
             <h3>Carrito de compras</h3>
             {                
-                carritoReducer.items.length === 0 ? dibujarCarritoVacio() : dibujarCarrito()
+                carritoReducer.items.length === 1 ? dibujarCarritoVacio() : dibujarCarrito()
             }
         </div>
         </>

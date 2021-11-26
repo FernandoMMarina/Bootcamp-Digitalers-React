@@ -1,7 +1,7 @@
-import { types } from "../../types/carrito/types"
+import { types } from "../../types/carrito/types";
 
 export const CARRITO_ADD = {
-    type: types.ADD,
+    type: types.ARTICULO_ADD,
     payload: {}
 }
 

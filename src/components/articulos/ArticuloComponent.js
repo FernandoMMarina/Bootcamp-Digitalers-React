@@ -9,9 +9,9 @@ export default function ArticuloComponent(props) {
 
     return (
         <>
-            <div className="col-xs-auto col-sm-auto col-md-6 col-lg-2 col-xxl-2 text-center">
+            <div className="col-xs-auto col-sm-auto col-md-3 col-lg-2 col-xxl-2 text-center">
                 <div className="card h-100">
-                    <img src="/assets/images/ceramica.jpg" className="card-img-top" alt="ceramica" />
+                    <img src={articulo.img} className="card-img-top" alt="ceramica" />
                     <div className="card-body">
                         <Typography color="textSecondary"  variant="h5" gutterBottom>
                             {articulo.titulo}

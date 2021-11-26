@@ -3,9 +3,10 @@
         "id":1,
         "titulo": "Iphone 7",
         "codigo": "000001",
-        "precio": 1500,
+        "precio": 85000,
         "categoria": "Celulares",
-        "marca": "Apple"
+        "marca": "Apple",
+        "img":"/assets/images/swappie-product-iphone-7-rose-gold.webp"
     },  
     {   
         "id":2,
@@ -13,20 +14,67 @@
         "codigo": "000002",
         "precio": 3500,
         "categoria": "Celulares",
-        "marca": "Apple"
+        "marca": "Apple",
+        "img":"/assets/images/swappie-product-iphone-7-plus-rose-gold.webp"
     },  
     {   
         "id":3,
-        "titulo": "Smart TV Hyundai",
+        "titulo": "Smart TV Hyundai 4K 50 Pulgadas",
         "codigo": "000003",
-        "precio": 1530,
+        "precio": 57999,
         "categoria": "Televisores",
-        "marca": "Hyundai"
+        "marca": "Hyundai",
+        "img":"/assets/images/D_NQ_NP_2X_967879-MLA47132963322_082021-F.webp",
+        "caracteristicas":"HYLED-50UHD5A "
     },
     {   
         "id":4,
-        "titulo": "Smart TV Sony",
+        "titulo": "Smart TV Sony Led 55 Pulgadas",
         "codigo": "000004",
+        "precio": 200000,
+        "categoria": "Televisores",
+        "marca": "Sony",
+        "img":"/assets/images/D_NQ_NP_949897-MLA47204352756_082021-O.webp",
+        "caracteristicas":"Disfruta de tu contenido favorito de Google TV en 4K HDR gracias al color, el contraste y la claridad de alta calidad de BRAVIA."
+    },
+    {   
+        "id":5,
+        "titulo": "Impresora 3d Ender-4 V2",
+        "codigo": "000005",
+        "precio": 56718,
+        "categoria": "Impresion 3d",
+        "marca": "Creality",
+        "img":"/assets/images/D_NQ_NP_713003-MLA44029060907_112020-O.webp"
+    },
+    {   
+        "id":6,
+        "titulo": "Iphone 8",
+        "codigo": "000006",
+        "precio": 115000,
+        "categoria": "Celulares",
+        "marca": "Apple",
+        "img":"/assets/images/swappie-product-iphone-8-gold.avif"
+    },
+    {   
+        "id":7,
+        "titulo": "Smart TV Sony",
+        "codigo": "000007",
+        "precio": 1530,
+        "categoria": "Televisores",
+        "marca": "Sony"
+    },
+    {   
+        "id":8,
+        "titulo": "Smart TV Sony",
+        "codigo": "000008",
+        "precio": 1530,
+        "categoria": "Televisores",
+        "marca": "Sony"
+    },
+    {   
+        "id":9,
+        "titulo": "Smart TV Sony",
+        "codigo": "000009",
         "precio": 1530,
         "categoria": "Televisores",
         "marca": "Sony"
@@ -34,7 +82,7 @@
     {   
         "id":4,
         "titulo": "Smart TV Sony",
-        "codigo": "000004",
+        "codigo": "000010",
         "precio": 1530,
         "categoria": "Televisores",
         "marca": "Sony"
@@ -42,7 +90,7 @@
     {   
         "id":4,
         "titulo": "Smart TV Sony",
-        "codigo": "000004",
+        "codigo": "000011",
         "precio": 1530,
         "categoria": "Televisores",
         "marca": "Sony"
@@ -50,47 +98,7 @@
     {   
         "id":4,
         "titulo": "Smart TV Sony",
-        "codigo": "000004",
-        "precio": 1530,
-        "categoria": "Televisores",
-        "marca": "Sony"
-    },
-    {   
-        "id":4,
-        "titulo": "Smart TV Sony",
-        "codigo": "000004",
-        "precio": 1530,
-        "categoria": "Televisores",
-        "marca": "Sony"
-    },
-    {   
-        "id":4,
-        "titulo": "Smart TV Sony",
-        "codigo": "000004",
-        "precio": 1530,
-        "categoria": "Televisores",
-        "marca": "Sony"
-    },
-    {   
-        "id":4,
-        "titulo": "Smart TV Sony",
-        "codigo": "000004",
-        "precio": 1530,
-        "categoria": "Televisores",
-        "marca": "Sony"
-    },
-    {   
-        "id":4,
-        "titulo": "Smart TV Sony",
-        "codigo": "000004",
-        "precio": 1530,
-        "categoria": "Televisores",
-        "marca": "Sony"
-    },
-    {   
-        "id":4,
-        "titulo": "Smart TV Sony",
-        "codigo": "000004",
+        "codigo": "000012",
         "precio": 1530,
         "categoria": "Televisores",
         "marca": "Sony"

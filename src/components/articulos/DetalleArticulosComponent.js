@@ -26,12 +26,14 @@ export default function DetallearticulosComponent() {
 					<div className="card mb-3">
 					<div className="row g-0">
 						<div className="col-md-5">
-						<img src="/assets/images/ceramica.jpg" className="img-fluid rounded-start" alt="ceramica"/>
+						<img src={articulo.img} className="img-fluid rounded-start" alt="ceramica"/>
 						</div>
 						<div className="col-md-7">
 							<div className="card-body">
 								<h5 className="card-title">{articulo.titulo}</h5>
-								<p className="card-text">{articulo.codigo}</p>
+								<p className="card-text">${articulo.precio}</p>
+								<p className="card-text">Codigo : {articulo.codigo}</p>
+								<p className="card-text">{articulo.caracteristicas}</p>
 								<div className="col-sm-12 col-md-12 col-lg-8 col-xxl-6">
 								<ArticuloAdd articulo={articulo}/>
 								</div>

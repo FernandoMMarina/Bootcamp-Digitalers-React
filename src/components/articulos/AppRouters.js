@@ -11,6 +11,7 @@ import MensajeriaComponent from "./MensajeriaComponent";
 import CheckoutComponent from "./CheckoutComponent";
 import CheckoutSuccessComponent from "./CheckoutSuccessComponent";
 import HomeComponent from "./HomeComponent";
+import UserComponent from "./UserComponent";
 
 export default function AppRouters() {
 
@@ -47,6 +48,7 @@ export default function AppRouters() {
                     <Route exact path="/carrito" component={Carritocomponent}/>
                     <Route exact path="/checkout" component={CheckoutComponent}/>
                     <Route exact path="/checkout-success/:id" component={CheckoutSuccessComponent}/>
+                    <Route exact path="/profile"component={UserComponent}/>
                     <Route path="*" component={NotFoundComponent}/>
                 </Switch>
             </div>

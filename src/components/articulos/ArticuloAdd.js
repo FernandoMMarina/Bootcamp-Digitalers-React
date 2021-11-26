@@ -3,16 +3,15 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { CARRITO_ADD, CARRITO_UPDATE } from '../../redux/actions/carrito/actions';
 import { MSJ_ADD } from '../../redux/actions/mensaje/actions';
-import { IconButton   } from '@material-ui/core';
+import {IconButton} from '@material-ui/core';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import RemoveShoppingCartIcon from '@material-ui/icons/RemoveShoppingCart';
 import Button from '@material-ui/core/Button';
-import { createTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
-import { green, purple } from '@material-ui/core/colors';
-import { borders } from '@material-ui/system';
+import { Store } from '@material-ui/icons';
+
 
 export const ArticuloAdd = (props) => {
-
+	
     const {articulo} = props;
 
 	const carritoReducer = useSelector(
@@ -34,9 +33,9 @@ export const ArticuloAdd = (props) => {
 	},[articulo.id, carritoReducer.items]
 	);
 
-	const carritoDispath = useDispatch();
+	const carritoDispatch = useDispatch();
 
-	const submitHandler = () => {
+	const submitHandler = () => { 
 
 		const existsInCart = carritoReducer.items.find(item=>item.item.id === articulo.id);
 		
@@ -51,13 +50,14 @@ export const ArticuloAdd = (props) => {
 			cantidad : cantidad
 		}
 
-		carritoDispath(action);
-
+		carritoDispatch(action);
+		
+		
 		//informo que hubo un mensaje
 		let actionMsj = MSJ_ADD;
-		actionMsj.payload = 'Se ha agregado';
-
-		carritoDispath(actionMsj)
+		actionMsj.payload = 'Se ha agregado ' + cantidad +" "+  articulo.titulo;
+		carritoDispatch(actionMsj);
+		
 	}
 
 	const increment = () => {
